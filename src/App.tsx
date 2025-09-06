@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X, Play, Mail, Phone, MapPin, Linkedin, Github, Youtube, Settings, Wrench, Zap, Target, Award, Users, ChevronRight, Cuboid as Cube, Layers, Box, MousePointer, Download, ExternalLink, Cpu, Cog, Compass, Ruler, Calculator, Palette } from 'lucide-react';
+import customerImg from './customer.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -128,9 +129,9 @@ function App() {
       </div>
 
       {/* Fixed YouTube Button */}
-      <div className="fixed top-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-50">
         <a 
-          href="https://youtube.com/@yourtechchannel" 
+          href="https://www.youtube.com/@studio3dconcept" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl flex items-center gap-3 shadow-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-red-500/25 backdrop-blur-sm border border-red-200"
@@ -192,7 +193,7 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="relative z-10 min-h-screen flex items-center justify-center px-4">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
           {/* Large 3D Elements */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-20 left-10 animate-bounce opacity-20" style={{ animationDelay: '0s', animationDuration: '4s' }}>
@@ -212,32 +213,42 @@ function App() {
             </div>
           </div>
 
-          <div className="relative z-10">
-            <h1 className="text-7xl md:text-9xl font-black mb-8 leading-tight">
-              <span className="block text-gray-900 animate-fade-in-up drop-shadow-lg">3D</span>
-              <span className="block text-red-600 animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.3s' }}>DESIGNER</span>
-            </h1>
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
+            {/* Left side - Main content */}
+            <div className="md:w-1/2 text-left">
+              <h1 className="text-7xl md:text-8xl font-black mb-8 leading-tight">
+                <span className="block text-gray-900 animate-fade-in-up drop-shadow-lg">3D</span>
+                <span className="block text-red-600 animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.3s' }}>DESIGNER</span>
+              </h1>
             
-            <div className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <p className="mb-4">
-                Passionate <span className="text-red-600 font-bold">Mechanical Design Engineer</span> with 8+ years of experience 
-                transforming innovative concepts into precise mechanical solutions.
-              </p>
-              <p>
-                Specializing in advanced <span className="text-red-600 font-bold">CAD/CAM technologies</span> including 
-                SolidWorks, AutoCAD, and CATIA for automotive, aerospace, and industrial applications.
-              </p>
+              <div className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                <p className="mb-4">
+                  <span className="text-red-600 font-bold">Technicien en conception mécanique</span> mécanique doté d’une solide maîtrise des logiciels de CAO/DAO (SolidWorks, AutoCAD, CATIA), spécialisé dans la conception et l’optimisation de pièces et d’assemblages mécaniques. Capable de lire et interpréter des plans techniques,
+                </p>
+                <p>
+                  d’appliquer les normes industrielles et de collaborer étroitement avec les ingénieurs et les équipes de production. Rigoureux, créatif et orienté solutions, je contribue au développement de produits fiables, innovants et adaptés aux besoins de l’entreprise.       
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+                <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
+                  <MousePointer size={24} className="group-hover:animate-pulse" />
+                  Explore My Work
+                </button>               
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-              <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
-                <MousePointer size={24} className="group-hover:animate-pulse" />
-                Explore My Work
-              </button>
-              <button className="group border-2 border-red-600 hover:bg-red-600 text-red-600 hover:text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 flex items-center gap-3 bg-white/50 backdrop-blur-sm">
-                <Download size={24} className="group-hover:animate-bounce" />
-                Download Resume
-              </button>
+            {/* Right side - Customer Image */}
+            <div className="md:w-1/2 flex items-center justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl border-2 border-red-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <img
+                  src={customerImg}
+                  alt="Customer"
+                  className="w-72 h-72 object-cover rounded-full mb-6 shadow-lg border-4 border-red-500"
+                />
+                <h4 className="text-3xl font-bold text-red-600 text-center mb-2">Mohamed Ahmed</h4>
+                <p className="text-gray-700 text-center text-lg">Valued Customer</p>
+              </div>
             </div>
           </div>
         </div>
@@ -525,7 +536,7 @@ function App() {
         </div>
       </footer>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           from {
             opacity: 0;
