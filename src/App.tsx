@@ -1,25 +1,9 @@
 import React from 'react';
-import { Menu, X, Play, Mail, Phone, MapPin, Linkedin, Github, Youtube, Settings, Wrench, Zap, Target, Award, Users, ChevronRight, Cuboid as Cube, Layers, Box, MousePointer, Download, ExternalLink, Cpu, Cog, Compass, Ruler, Calculator, Palette } from 'lucide-react';
+import { Menu, X, Play, Mail, Phone, MapPin, Linkedin, Github, Youtube, Settings, Wrench, Target, Cuboid as Cube, Layers, Box, MousePointer, ExternalLink, Calculator, FileText } from 'lucide-react';
 import customerImg from './customer.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [activeSkill, setActiveSkill] = React.useState(0);
-
-  const skills = [
-    { name: 'SolidWorks', icon: Settings, color: 'from-red-500 to-red-600' },
-    { name: 'AutoCAD', icon: Target, color: 'from-orange-500 to-red-500' },
-    { name: 'CATIA', icon: Wrench, color: 'from-yellow-500 to-orange-500' },
-    { name: '3D Modeling', icon: Cube, color: 'from-green-500 to-blue-500' },
-    { name: 'FEA Analysis', icon: Layers, color: 'from-blue-500 to-purple-500' },
-    { name: 'Project Management', icon: Users, color: 'from-purple-500 to-pink-500' },
-    { name: 'Mechanical Design', icon: Cog, color: 'from-indigo-500 to-purple-500' },
-    { name: 'CAM Programming', icon: Cpu, color: 'from-teal-500 to-blue-500' },
-    { name: 'Technical Drawing', icon: Compass, color: 'from-emerald-500 to-teal-500' },
-    { name: 'Precision Engineering', icon: Ruler, color: 'from-cyan-500 to-blue-500' },
-    { name: 'Simulation', icon: Calculator, color: 'from-violet-500 to-purple-500' },
-    { name: 'Product Design', icon: Palette, color: 'from-pink-500 to-red-500' }
-  ];
 
   const catiaProjects = [
     {
@@ -68,13 +52,6 @@ function App() {
       tags: ['Consumer', 'Ergonomic', 'Power Tools']
     }
   ];
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSkill((prev) => (prev + 1) % skills.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 overflow-x-hidden">
@@ -151,7 +128,7 @@ function App() {
             </div>
             
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <a 
                   key={item}
                   href={`#${item.toLowerCase()}`} 
@@ -175,7 +152,7 @@ function App() {
           {isMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-red-100">
               <div className="flex flex-col space-y-4">
-                {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
                   <a 
                     key={item}
                     href={`#${item.toLowerCase()}`} 
@@ -254,66 +231,190 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="relative z-10 py-20 bg-white/50 backdrop-blur-sm">
+      {/* Skills Section */}
+      <section id="Skills" className="relative z-10 py-20 bg-white/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-6xl md:text-7xl font-black mb-6">
-              About <span className="text-red-600">Me</span>
+              My <span className="text-red-600">Skills</span>
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-red-100 hover:border-red-300 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                <h3 className="text-4xl font-bold mb-6 text-red-600">Professional Journey</h3>
-                <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
-                  <p>
-                    With over 8 years of experience in mechanical design engineering, I specialize in 
-                    creating innovative solutions for complex engineering challenges across automotive, 
-                    aerospace, and industrial applications.
-                  </p>
-                  <p>
-                    I have successfully led cross-functional teams in developing cutting-edge products 
-                    from concept to manufacturing, utilizing advanced CAD/CAM software and simulation tools 
-                    to ensure optimal performance and cost-effectiveness.
-                  </p>
-                  <p>
-                    My passion for sharing knowledge has led me to create educational content on YouTube, 
-                    where I demonstrate advanced modeling techniques and share industry best practices 
-                    with aspiring engineers worldwide.
-                  </p>
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* CONCEPTION MECANIQUE 3D/2D */}
+            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl border-2 border-red-200 hover:border-red-300 transition-all duration-300 shadow-xl hover:shadow-2xl group h-full">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-gradient-to-br from-red-500 to-red-600 rounded-xl">
+                  <Settings className="w-8 h-8 text-white animate-spin-slow" />
+                </div>
+                <h3 className="text-3xl font-bold">
+                  CONCEPTION <span className="text-red-600">MECANIQUE</span>
+                </h3>
+              </div>
+              
+              <div className="space-y-8">
+                {/* Expertise */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-600 flex items-center gap-2">
+                    <Cube className="w-5 h-5" />
+                    Expertise
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Conception assistée par ordinateur (CAO) : SolidWorks, CATIA, AutoCAD</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Lecture et interprétation de plans techniques (2D/3D)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Connaissance des matériaux (métalliques, plastiques, composites)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Tolérances et ajustements : Normes ISO</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Assemblage mécanique et compréhension des mécanismes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Résistance des matériaux (RDM) et calculs mécaniques</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Normes et standards industriels : ISO, ANSI</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Compétences logicielles */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-600 flex items-center gap-2">
+                    <Wrench className="w-5 h-5" />
+                    Compétences logicielles
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>CAO/DAO : conception et dessin technique</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>FAO : MasterCam pour la fabrication</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Simulation : SolidWorks & CATIA Simulation</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Compétences transversales */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-600 flex items-center gap-2">
+                    <Target className="w-5 h-5" />
+                    Compétences transversales
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Analyse et résolution de problèmes techniques</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Communication technique et travail d'équipe</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Gestion du temps et veille technologique</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-8">
-              <h3 className="text-4xl font-bold text-gray-900">Technical Expertise</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {skills.map((skill, index) => {
-                  const Icon = skill.icon;
-                  const isActive = index === activeSkill;
-                  return (
-                    <div 
-                      key={index} 
-                      className={`group transition-all duration-500 transform ${isActive ? 'scale-110 z-10' : 'hover:scale-105'}`}
-                    >
-                      <div className={`bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${
-                        isActive 
-                          ? 'border-red-400 shadow-red-200' 
-                          : 'border-gray-200 hover:border-red-300'
-                      }`}>
-                        <div className={`p-4 rounded-xl bg-gradient-to-r ${skill.color} mb-4 ${isActive ? 'animate-pulse' : ''}`}>
-                          <Icon size={32} className="text-white mx-auto" />
-                        </div>
-                        <h4 className="font-bold text-center text-gray-800 text-sm leading-tight">
-                          {skill.name}
-                        </h4>
-                      </div>
-                    </div>
-                  );
-                })}
+            {/* BUREAUTIQUE */}
+            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl border-2 border-red-200 hover:border-red-300 transition-all duration-300 shadow-xl hover:shadow-2xl group h-full">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-gradient-to-br from-red-500 to-red-600 rounded-xl">
+                  <Settings className="w-8 h-8 text-white animate-spin-slow" />
+                </div>
+                <h3 className="text-3xl font-bold">
+                  SUITE <span className="text-red-600">OFFICE</span>
+                </h3>
+              </div>
+
+              <div className="space-y-8">
+                {/* Excel */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-600 flex items-center gap-2">
+                    <Calculator className="w-5 h-5" />
+                    Microsoft Excel
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Tableaux et bases de données avancées</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Formules complexes et tableaux croisés dynamiques</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Tableaux de bord et macros VBA</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Word */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-600 flex items-center gap-2">
+                    <FileText className="w-5 h-5" />
+                    Microsoft Word
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Mise en page professionnelle et styles</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Rapports techniques avancés</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Publipostage et collaboration</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* PowerPoint */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-600 flex items-center gap-2">
+                    <Play className="w-5 h-5" />
+                    PowerPoint
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Présentations professionnelles et design</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Animations et transitions avancées</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span>Mode présentateur et interactivité</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -481,7 +582,7 @@ function App() {
             <div>
               <h3 className="text-4xl font-bold mb-6 text-white">Quick Links</h3>
               <div className="space-y-4">
-                {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((link) => (
+                {['Home', 'Skills', 'Projects', 'Contact'].map((link) => (
                   <a 
                     key={link}
                     href={`#${link.toLowerCase()}`} 
