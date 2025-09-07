@@ -1,6 +1,17 @@
 import React from 'react';
 import YouTube from 'react-youtube';
 import { Youtube as YoutubeIcon, ExternalLink } from 'lucide-react';
+import c1 from '../img/c1.jpg'
+import c2 from '../img/c1.jpg'
+import c3 from '../img/c1.jpg'
+import c4 from '../img/c1.jpg'
+import c5 from '../img/c1.jpg'
+import s1 from '../img/s1.jpg'
+import s2 from '../img/s2.jpg'
+import s3 from '../img/s3.jpg'
+import s4 from '../img/s4.jpg'
+import s5 from '../img/s5.jpg'
+
 
 interface VideoCategory {
   name: string;
@@ -9,10 +20,8 @@ interface VideoCategory {
 
 interface Video {
   title: string;
-  description: string;
   videoId: string;
   thumbnail: string;
-  tags: string[];
 }
 
 const videoCategories: VideoCategory[] = [
@@ -20,24 +29,59 @@ const videoCategories: VideoCategory[] = [
     name: "CATIA Projects",
     videos: [
       {
-        title: "Advanced Engine Block Design",
-        description: "Complete V8 engine block modeling with thermal analysis and optimization",
-        videoId: "NRffAo8gMxc",
-        thumbnail: "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?auto=compress&cs=tinysrgb&w=600",
-        tags: ["Thermal Analysis", "V8 Engine", "Optimization"]
+        title: "PART DESIGN",
+        videoId: "J3rpuap2Xe4",
+        thumbnail: c1,
       },
-      // Add more videos here
+      {
+        title: "ASSEMBLY DESIGN & DMU KINEMATICS",
+        videoId: "GnO76iEXHHg",
+        thumbnail: c2,
+      },
+      {
+        title: "GENERATIVE SHAPE DESIGN",
+        videoId: "_WFdmMu_3RI",
+        thumbnail: c3,
+      },
+      {
+        title: "ASSEMBLY DESIGN",
+        videoId: "GnO76iEXHHg",
+        thumbnail: c4,
+      },
+      {
+        title: "DRAFTING",
+        videoId: "PgKexlS1wjw",
+        thumbnail: c5,
+      },
     ]
   },
   {
-    name: "SolidWorks Projects",
+    name: "SOLIDWORKS Projects",
     videos: [
       {
-        title: "Robotic Arm Mechanism",
-        description: "6-DOF industrial robotic arm with kinematic simulation",
-        videoId: "NRffAo8gMxc", // Replace with actual video ID
-        thumbnail: "https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=600",
-        tags: ["Robotics", "6-DOF", "Simulation"]
+        title: "VIDEO 1 : ADVENCED ASSEMBLY & SIMULATION [ C-CLAMP]",
+        videoId: "RK3NxL_Mo3w", // Replace with actual video ID
+        thumbnail: s1,
+      },
+      {
+        title: "VIDEO 2 : ADVENCED ASSEMBLY & PARTS [ SCISSOR TABLE ]",
+        videoId: "r-3YH3PLZ8E", // Replace with actual video ID
+        thumbnail: s2,
+      },
+      {
+        title: "VIDEO 3 : PARTS & ASSEMBLY [ PIPE VICE ]",
+        videoId: "-cUCeEt_ayU", // Replace with actual video ID
+        thumbnail: s3,
+      },
+      {
+        title: "PALY LIST 1 : PARTS SOLIDWORKS",
+        videoId: "kUZWn3eVkUE", // Replace with actual video ID
+        thumbnail: s4,
+      },
+      {
+        title: "VIDEO 4 : SHEET METAL SOLIDWORKS",
+        videoId: "xlMcPTXKM5E", // Replace with actual video ID
+        thumbnail: s5,
       },
       // Add more videos here
     ]
@@ -65,10 +109,10 @@ const Videos: React.FC = () => {
           <div key={categoryIndex} className="mb-20">
             <div className="flex items-center gap-6 mb-12">
               <div className="p-6 bg-red-600 rounded-3xl shadow-xl">
-                <YoutubeIcon className="text-white" size={50} />
+                <YoutubeIcon className="text-white" size={35} />
               </div>
               <div>
-                <h2 className="text-5xl font-bold text-gray-900">{category.name}</h2>
+                <h2 className="text-3xl font-bold text-gray-900">{category.name}</h2>
                 <p className="text-gray-600 text-xl">Watch tutorials and project demonstrations</p>
               </div>
             </div>
@@ -89,19 +133,6 @@ const Videos: React.FC = () => {
                     <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">
                       {video.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {video.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {video.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-3 py-1 bg-red-600/90 text-white text-xs rounded-full font-semibold"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                     <a
                       href={`https://www.youtube.com/watch?v=${video.videoId}`}
                       target="_blank"

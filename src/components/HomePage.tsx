@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Mail, Phone, MapPin, Linkedin, Github, Youtube, Settings, Wrench, Target, Cuboid as Cube, Layers, Box, MousePointer, ExternalLink, Calculator, FileText } from 'lucide-react';
-import customerImg from '../customer.png';
+import customerImg from '../img/customer.jpg';
+import chanelImg from '../img/logo.jpg';
+
 const HomePage: React.FC = () => {
   
   return (
@@ -120,13 +122,30 @@ const HomePage: React.FC = () => {
                   alt="Customer"
                   className="w-72 h-72 object-cover rounded-full mb-6 shadow-lg border-4 border-red-500"
                 />
-                <h4 className="text-3xl font-bold text-red-600 text-center mb-2">Nwfal</h4>
-                <p className="text-gray-700 text-center text-lg">Technicien Conception Mécanique 3D/2D</p>
+                <h4 className="text-3xl font-bold text-red-600 text-center mb-2">Nawfal</h4>
+                <p className="text-gray-700 text-center text-lg">Technicien EN Conception Mécanique</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section id='chanel'>
+          <div className="max-w-7xl mx-auto px-4 my-10 text-center flex flex-col items-center justify-center gap-6">
+            <img src={chanelImg} alt="" style={{maxWidth:300,borderRadius:20 }}/>
+            <a 
+                href="https://youtube.com/@savdesigner3d" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-6 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white"
+              >
+                <Youtube size={24} className="animate-pulse" />
+                Subscribe to Channel
+              </a>
+          
+          </div>
+              
+      </section>    
 
       {/* Skills Section */}
       <section id="Skills" className="relative z-10 py-20 bg-white/50 backdrop-blur-sm">
@@ -384,7 +403,7 @@ const HomePage: React.FC = () => {
 
           <div className="border-t border-gray-700 mt-16 pt-8 text-center">
             <p className="text-gray-400 text-lg">
-              © 2025 Nwfal 3D/2D Designer. All rights reserved.
+              © 2025 Nawfal 3D/2D Designer. All rights reserved.
             </p>
           </div>
         </div>

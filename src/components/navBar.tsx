@@ -8,7 +8,7 @@ function NavBar() {
                 <div className="max-w-7xl mx-auto px-4 py-4">
                   <div className="flex justify-between items-center">
                     <div className="text-3xl font-black">
-                      <span className="text-gray-900">Nwfal</span>
+                      <span className="text-gray-900">Nawfal</span>
                     </div>
                     
                     <div className="hidden md:flex space-x-8">
