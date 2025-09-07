@@ -2,10 +2,10 @@ import React from 'react';
 import YouTube from 'react-youtube';
 import { Youtube as YoutubeIcon, ExternalLink } from 'lucide-react';
 import c1 from '../img/c1.jpg'
-import c2 from '../img/c1.jpg'
-import c3 from '../img/c1.jpg'
-import c4 from '../img/c1.jpg'
-import c5 from '../img/c1.jpg'
+import c2 from '../img/c2.jpg'
+import c3 from '../img/c3.jpg'
+import c4 from '../img/c4.jpg'
+import c5 from '../img/c5.jpg'
 import s1 from '../img/s1.jpg'
 import s2 from '../img/s2.jpg'
 import s3 from '../img/s3.jpg'
