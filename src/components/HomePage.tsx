@@ -242,10 +242,13 @@ const HomePage: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up"
                 style={{ animationDelay: "0.9s" }}
               >
+                <a href="https://www.youtube.com/@studio3dconcept" target="_blank">
                 <button className="group bg-red-600 hover:bg-red-700 text-white text-center px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
                   <Youtube size={24} />
                   Subscribe to Channel
                 </button>
+                </a>
+
               </div>
             </div>
 
@@ -543,7 +546,7 @@ const HomePage: React.FC = () => {
               </h3>
 
               <a
-                href="https://youtube.com/@savdesigner3d"
+                href="https://youtube.com/@studio3dconcept"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-6 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white"
