@@ -65,7 +65,7 @@ const videoCategories: VideoCategory[] = [
       },
       {
         title: "ADVENCED ASSEMBLY & PARTS [ SCISSOR TABLE ]",
-        videoId: "r-3YH3PLZ8E", // Replace with actual video ID
+        videoId: "yN_ZuHrxhH4", // Replace with actual video ID
         thumbnail: s2,
       },
       {
@@ -80,7 +80,7 @@ const videoCategories: VideoCategory[] = [
       },
       {
         title: "SHEET METAL SOLIDWORKS",
-        videoId: "xlMcPTXKM5E", // Replace with actual video ID
+        videoId: "7ItxXqHfGqs", // Replace with actual video ID
         thumbnail: s5,
       },
       // Add more videos here
