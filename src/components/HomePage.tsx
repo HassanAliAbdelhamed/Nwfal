@@ -219,7 +219,7 @@ const HomePage: React.FC = () => {
         className="relative z-10 min-h-screen flex items-center justify-center px-4"
       >
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mt-10 mb-16">
             <h2 className="text-6xl md:text-7xl font-black mb-6">
               My <span className="text-red-600">Chanel</span>
             </h2>
