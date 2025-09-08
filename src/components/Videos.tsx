@@ -30,7 +30,7 @@ const videoCategories: VideoCategory[] = [
     videos: [
       {
         title: "PART DESIGN",
-        videoId: "J3rpuap2Xe4",
+        videoId: "9SZ_XTo7GHo",
         thumbnail: c1,
       },
       {
@@ -59,27 +59,27 @@ const videoCategories: VideoCategory[] = [
     name: "SOLIDWORKS Projects",
     videos: [
       {
-        title: "VIDEO 1 : ADVENCED ASSEMBLY & SIMULATION [ C-CLAMP]",
+        title: "ADVENCED ASSEMBLY & SIMULATION [ C-CLAMP]",
         videoId: "RK3NxL_Mo3w", // Replace with actual video ID
         thumbnail: s1,
       },
       {
-        title: "VIDEO 2 : ADVENCED ASSEMBLY & PARTS [ SCISSOR TABLE ]",
+        title: "ADVENCED ASSEMBLY & PARTS [ SCISSOR TABLE ]",
         videoId: "r-3YH3PLZ8E", // Replace with actual video ID
         thumbnail: s2,
       },
       {
-        title: "VIDEO 3 : PARTS & ASSEMBLY [ PIPE VICE ]",
+        title: "PARTS & ASSEMBLY [ PIPE VICE ]",
         videoId: "-cUCeEt_ayU", // Replace with actual video ID
         thumbnail: s3,
       },
       {
-        title: "PALY LIST 1 : PARTS SOLIDWORKS",
+        title: "PARTS SOLIDWORKS",
         videoId: "kUZWn3eVkUE", // Replace with actual video ID
         thumbnail: s4,
       },
       {
-        title: "VIDEO 4 : SHEET METAL SOLIDWORKS",
+        title: "SHEET METAL SOLIDWORKS",
         videoId: "xlMcPTXKM5E", // Replace with actual video ID
         thumbnail: s5,
       },

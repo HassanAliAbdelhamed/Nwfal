@@ -206,7 +206,7 @@ const HomePage: React.FC = () => {
                   Nawfal
                 </h4>
                 <p className="text-gray-700 text-center text-lg">
-                  Technicien EN Conception Mécanique
+                  Technicien en conception mécanique
                 </p>
               </div>
             </div>
