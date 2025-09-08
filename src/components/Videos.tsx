@@ -9,7 +9,6 @@ import c5 from '../img/c5.jpg'
 import s1 from '../img/s1.jpg'
 import s2 from '../img/s2.jpg'
 import s3 from '../img/s3.jpg'
-import s4 from '../img/s4.jpg'
 import s5 from '../img/s5.jpg'
 
 
@@ -74,11 +73,6 @@ const videoCategories: VideoCategory[] = [
         thumbnail: s3,
       },
       {
-        title: "PARTS SOLIDWORKS",
-        videoId: "kUZWn3eVkUE", // Replace with actual video ID
-        thumbnail: s4,
-      },
-      {
         title: "SHEET METAL SOLIDWORKS",
         videoId: "7ItxXqHfGqs", // Replace with actual video ID
         thumbnail: s5,
@@ -125,7 +119,7 @@ const Videos: React.FC = () => {
                       videoId={video.videoId}
                       opts={opts}
                       onReady={onReady}
-                      className="w-full"
+                      className="w-full h-full"
                       iframeClassName="w-full h-full"
                     />
                   </div>

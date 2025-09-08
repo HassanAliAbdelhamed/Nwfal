@@ -221,7 +221,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mt-10 mb-16">
             <h2 className="text-6xl md:text-7xl font-black mb-6">
-              My <span className="text-red-600">Chanel</span>
+              My <span className="text-red-600">Channel</span>
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
           </div>
@@ -242,7 +242,8 @@ const HomePage: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up"
                 style={{ animationDelay: "0.9s" }}
               >
-                <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
+                <button className="group bg-red-600 hover:bg-red-700 text-white text-center px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
+                  <Youtube size={24} />
                   Subscribe to Channel
                 </button>
               </div>
