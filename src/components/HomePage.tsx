@@ -1,16 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Play, Mail, Phone, MapPin, Linkedin, Github, Youtube, Settings, Wrench, Target, Cuboid as Cube, Layers, Box, MousePointer, ExternalLink, Calculator, FileText } from 'lucide-react';
-import customerImg from '../img/customer.jpg';
-import chanelImg from '../img/logo.jpg';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
+  Youtube,
+  Settings,
+  Wrench,
+  Target,
+  Cuboid as Cube,
+  Layers,
+  Box,
+  MousePointer,
+  ExternalLink,
+  Calculator,
+  FileText,
+} from "lucide-react";
+import customerImg from "../img/customer.jpg";
+import chanelImg from "../img/logo.jpg";
+import { YouTubePlayer } from "react-youtube";
 
 const HomePage: React.FC = () => {
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 overflow-x-hidden">
       {/* Enhanced 3D Animated Background */}
-            <div className="fixed inset-0 z-0 overflow-hidden">
-              {/* Geometric shapes floating */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        {/* Geometric shapes floating */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <div
@@ -19,26 +37,46 @@ const HomePage: React.FC = () => {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 2}s`
+                animation: `float ${
+                  3 + Math.random() * 4
+                }s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 2}s`,
               }}
             >
-              {i % 3 === 0 && <Cube size={20 + Math.random() * 30} className="text-red-500 transform rotate-45" />}
-              {i % 3 === 1 && <Box size={15 + Math.random() * 25} className="text-blue-500 transform rotate-12" />}
-              {i % 3 === 2 && <Layers size={18 + Math.random() * 28} className="text-purple-500 transform -rotate-12" />}
+              {i % 3 === 0 && (
+                <Cube
+                  size={20 + Math.random() * 30}
+                  className="text-red-500 transform rotate-45"
+                />
+              )}
+              {i % 3 === 1 && (
+                <Box
+                  size={15 + Math.random() * 25}
+                  className="text-blue-500 transform rotate-12"
+                />
+              )}
+              {i % 3 === 2 && (
+                <Layers
+                  size={18 + Math.random() * 28}
+                  className="text-purple-500 transform -rotate-12"
+                />
+              )}
             </div>
           ))}
         </div>
-        
+
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: `
               linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
-          }}></div>
+              backgroundSize: "50px 50px",
+            }}
+          ></div>
         </div>
 
         {/* Floating particles */}
@@ -51,7 +89,7 @@ const HomePage: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
+                animationDuration: `${2 + Math.random() * 3}s`,
               }}
             />
           ))}
@@ -60,9 +98,9 @@ const HomePage: React.FC = () => {
 
       {/* Fixed YouTube Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <a 
-          href="https://www.youtube.com/@studio3dconcept" 
-          target="_blank" 
+        <a
+          href="https://www.youtube.com/@studio3dconcept"
+          target="_blank"
           rel="noopener noreferrer"
           className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl flex items-center gap-3 shadow-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-red-500/25 backdrop-blur-sm border border-red-200"
         >
@@ -72,83 +110,171 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <section id="home" className="relative z-10 min-h-screen flex items-center justify-center px-4">
+      <section
+        id="home"
+        className="relative z-10 min-h-screen flex items-center justify-center px-4"
+      >
         <div className="max-w-6xl mx-auto">
           {/* Large 3D Elements */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-20 left-10 animate-bounce opacity-20" style={{ animationDelay: '0s', animationDuration: '4s' }}>
+            <div
+              className="absolute top-20 left-10 animate-bounce opacity-20"
+              style={{ animationDelay: "0s", animationDuration: "4s" }}
+            >
               <Cube size={80} className="text-red-500 transform rotate-45" />
             </div>
-            <div className="absolute top-40 right-20 animate-bounce opacity-15" style={{ animationDelay: '1s', animationDuration: '5s' }}>
+            <div
+              className="absolute top-40 right-20 animate-bounce opacity-15"
+              style={{ animationDelay: "1s", animationDuration: "5s" }}
+            >
               <Box size={70} className="text-blue-500 transform rotate-12" />
             </div>
-            <div className="absolute bottom-40 left-20 animate-bounce opacity-25" style={{ animationDelay: '2s', animationDuration: '3.5s' }}>
-              <Layers size={90} className="text-purple-500 transform -rotate-12" />
+            <div
+              className="absolute bottom-40 left-20 animate-bounce opacity-25"
+              style={{ animationDelay: "2s", animationDuration: "3.5s" }}
+            >
+              <Layers
+                size={90}
+                className="text-purple-500 transform -rotate-12"
+              />
             </div>
-            <div className="absolute top-60 right-40 animate-spin opacity-10" style={{ animationDuration: '20s' }}>
+            <div
+              className="absolute top-60 right-40 animate-spin opacity-10"
+              style={{ animationDuration: "20s" }}
+            >
               <Settings size={60} className="text-green-500" />
             </div>
             <div className="absolute bottom-60 right-10 animate-pulse opacity-20">
-              <Wrench size={50} className="text-orange-500 transform rotate-45" />
+              <Wrench
+                size={50}
+                className="text-orange-500 transform rotate-45"
+              />
             </div>
           </div>
 
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
             {/* Left side - Main content */}
             <div className="md:w-1/2 text-left">
-            
-              <div className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <div
+                className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed animate-fade-in-up"
+                style={{ animationDelay: "0.6s" }}
+              >
                 <p className="mb-4">
-                  <span className="text-red-600 font-bold">Technicien en conception mécanique</span> mécanique doté d’une solide maîtrise des logiciels de CAO/DAO (SolidWorks, AutoCAD, CATIA), spécialisé dans la conception et l’optimisation de pièces et d’assemblages mécaniques. Capable de lire et interpréter des plans techniques,
+                  <span className="text-red-600 font-bold">
+                    Technicien en conception mécanique
+                  </span>{" "}
+                  mécanique doté d’une solide maîtrise des logiciels de CAO/DAO
+                  (SolidWorks, AutoCAD, CATIA), spécialisé dans la conception et
+                  l’optimisation de pièces et d’assemblages mécaniques. Capable
+                  de lire et interpréter des plans techniques,
                 </p>
                 <p>
-                  d’appliquer les normes industrielles et de collaborer étroitement avec les ingénieurs et les équipes de production. Rigoureux, créatif et orienté solutions, je contribue au développement de produits fiables, innovants et adaptés aux besoins de l’entreprise.       
+                  d’appliquer les normes industrielles et de collaborer
+                  étroitement avec les ingénieurs et les équipes de production.
+                  Rigoureux, créatif et orienté solutions, je contribue au
+                  développement de produits fiables, innovants et adaptés aux
+                  besoins de l’entreprise.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+              <div
+                className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up"
+                style={{ animationDelay: "0.9s" }}
+              >
                 <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
-                  <MousePointer size={24} className="group-hover:animate-pulse" />
+                  <MousePointer
+                    size={24}
+                    className="group-hover:animate-pulse"
+                  />
                   Explore My Work
-                </button>               
+                </button>
               </div>
             </div>
 
             {/* Right side - Customer Image */}
-            <div className="md:w-1/2 flex items-center justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div
+              className="md:w-1/2 flex items-center justify-center animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl border-2 border-red-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <img
                   src={customerImg}
                   alt="Customer"
                   className="w-72 h-72 object-cover rounded-full mb-6 shadow-lg border-4 border-red-500"
                 />
-                <h4 className="text-3xl font-bold text-red-600 text-center mb-2">Nawfal</h4>
-                <p className="text-gray-700 text-center text-lg">Technicien EN Conception Mécanique</p>
+                <h4 className="text-3xl font-bold text-red-600 text-center mb-2">
+                  Nawfal
+                </h4>
+                <p className="text-gray-700 text-center text-lg">
+                  Technicien EN Conception Mécanique
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id='chanel'>
-          <div className="max-w-7xl mx-auto px-4 my-10 text-center flex flex-col items-center justify-center gap-6">
-            <img src={chanelImg} alt="" style={{maxWidth:300,borderRadius:20 }}/>
-            <a 
-                href="https://youtube.com/@savdesigner3d" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-6 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white"
-              >
-                <Youtube size={24} className="animate-pulse" />
-                Subscribe to Channel
-              </a>
-          
+      <section
+        id="chanel"
+        className="relative z-10 min-h-screen flex items-center justify-center px-4"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-6xl md:text-7xl font-black mb-6">
+              My <span className="text-red-600">Chanel</span>
+            </h2>
+            <div className="w-24 h-1 bg-red-600 mx-auto"></div>
           </div>
-              
-      </section>    
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
+            {/* Left side - Main content */}
+            <div className="md:w-1/2 text-left">
+              <div
+                className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed animate-fade-in-up"
+                style={{ animationDelay: "0.6s" }}
+              >
+                <p>
+                  Plongez dans mon univers créatif ! Découvrez toutes mes vidéos
+                  démonstratives et laissez-vous inspirer par mon savoir-faire.{" "}
+                </p>
+              </div>
 
+              <div
+                className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up"
+                style={{ animationDelay: "0.9s" }}
+              >
+                <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
+                  Subscribe to Channel
+                </button>
+              </div>
+            </div>
+
+            {/* Right side - Customer Image */}
+            <div
+              className="md:w-1/2 flex items-center justify-center animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl border-2 border-red-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <img
+                  src={chanelImg}
+                  alt="Customer"
+                  className="w-72 h-72 object-cover rounded-full mb-6 shadow-lg border-4 border-red-500"
+                />
+                <h4 className="text-3xl font-bold text-red-600 text-center mb-2">
+                  3DConceptMecha
+                </h4>
+                <p className="text-gray-700 text-center text-lg">
+                  Plongez dans mon univers créatif{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Skills Section */}
-      <section id="Skills" className="relative z-10 py-20 bg-white/50 backdrop-blur-sm">
+      <section
+        id="Skills"
+        className="relative z-10 py-20 bg-white/50 backdrop-blur-sm"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-6xl md:text-7xl font-black mb-6">
@@ -168,7 +294,7 @@ const HomePage: React.FC = () => {
                   CONCEPTION <span className="text-red-600">MECANIQUE</span>
                 </h3>
               </div>
-              
+
               <div className="space-y-8">
                 {/* Expertise */}
                 <div className="space-y-4">
@@ -179,15 +305,23 @@ const HomePage: React.FC = () => {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                      <span>Conception assistée par ordinateur (CAO) : SolidWorks, CATIA, AutoCAD</span>
+                      <span>
+                        Conception assistée par ordinateur (CAO) : SolidWorks,
+                        CATIA, AutoCAD
+                      </span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                      <span>Lecture et interprétation de plans techniques (2D/3D)</span>
+                      <span>
+                        Lecture et interprétation de plans techniques (2D/3D)
+                      </span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                      <span>Connaissance des matériaux (métalliques, plastiques, composites)</span>
+                      <span>
+                        Connaissance des matériaux (métalliques, plastiques,
+                        composites)
+                      </span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
@@ -195,11 +329,15 @@ const HomePage: React.FC = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                      <span>Assemblage mécanique et compréhension des mécanismes</span>
+                      <span>
+                        Assemblage mécanique et compréhension des mécanismes
+                      </span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                      <span>Résistance des matériaux (RDM) et calculs mécaniques</span>
+                      <span>
+                        Résistance des matériaux (RDM) et calculs mécaniques
+                      </span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
@@ -279,7 +417,9 @@ const HomePage: React.FC = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                      <span>Formules complexes et tableaux croisés dynamiques</span>
+                      <span>
+                        Formules complexes et tableaux croisés dynamiques
+                      </span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-red-500 rounded-full"></span>
@@ -338,7 +478,10 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="relative z-10 bg-gray-900 text-white py-16">
+      <footer
+        id="contact"
+        className="relative z-10 bg-gray-900 text-white py-16"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             <div>
@@ -350,29 +493,37 @@ const HomePage: React.FC = () => {
                   <div className="p-3 bg-red-600 rounded-xl group-hover:bg-red-700 transition-colors">
                     <Mail className="text-white" size={20} />
                   </div>
-                  <span className="text-gray-300 group-hover:text-white transition-colors">sav.designer@email.com</span>
+                  <span className="text-gray-300 group-hover:text-white transition-colors">
+                    sav.designer@email.com
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 group">
                   <div className="p-3 bg-red-600 rounded-xl group-hover:bg-red-700 transition-colors">
                     <Phone className="text-white" size={20} />
                   </div>
-                  <span className="text-gray-300 group-hover:text-white transition-colors">+1 (555) 123-4567</span>
+                  <span className="text-gray-300 group-hover:text-white transition-colors">
+                    +1 (555) 123-4567
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 group">
                   <div className="p-3 bg-red-600 rounded-xl group-hover:bg-red-700 transition-colors">
                     <MapPin className="text-white" size={20} />
                   </div>
-                  <span className="text-gray-300 group-hover:text-white transition-colors">San Francisco, CA</span>
+                  <span className="text-gray-300 group-hover:text-white transition-colors">
+                    San Francisco, CA
+                  </span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold mb-6 text-white">Quick Links</h3>
+              <h3 className="text-4xl font-bold mb-6 text-white">
+                Quick Links
+              </h3>
               <div className="space-y-4">
                 {[
-                  { name: 'Home', path: '/' },
-                  { name: 'Videos', path: '/videos' },
+                  { name: "Home", path: "/" },
+                  { name: "Videos", path: "/videos" },
                 ].map((item) => (
                   <Link
                     key={item.name}
@@ -386,12 +537,13 @@ const HomePage: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold mb-6 text-white">Connect & Subscribe</h3>
-              
-              
-              <a 
-                href="https://youtube.com/@savdesigner3d" 
-                target="_blank" 
+              <h3 className="text-4xl font-bold mb-6 text-white">
+                Connect & Subscribe
+              </h3>
+
+              <a
+                href="https://youtube.com/@savdesigner3d"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-6 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white"
               >
@@ -435,8 +587,8 @@ const HomePage: React.FC = () => {
           opacity: 0;
         }
       `}</style>
-      </div>
+    </div>
   );
 };
 
-export default HomePage
+export default HomePage;
