@@ -5,8 +5,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Linkedin,
-  Github,
   Youtube,
   Settings,
   Wrench,
@@ -15,13 +13,11 @@ import {
   Layers,
   Box,
   MousePointer,
-  ExternalLink,
   Calculator,
   FileText,
 } from "lucide-react";
 import customerImg from "../img/customer.jpg";
 import chanelImg from "../img/logo.jpg";
-import { YouTubePlayer } from "react-youtube";
 
 const HomePage: React.FC = () => {
   return (
@@ -163,7 +159,7 @@ const HomePage: React.FC = () => {
                   <span className="text-red-600 font-bold">
                     Technicien en conception mécanique
                   </span>{" "}
-                  mécanique doté d’une solide maîtrise des logiciels de CAO/DAO
+                  doté d’une solide maîtrise des logiciels de CAO/DAO
                   (SolidWorks, AutoCAD, CATIA), spécialisé dans la conception et
                   l’optimisation de pièces et d’assemblages mécaniques. Capable
                   de lire et interpréter des plans techniques,
@@ -181,13 +177,18 @@ const HomePage: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up"
                 style={{ animationDelay: "0.9s" }}
               >
-                <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
-                  <MousePointer
-                    size={24}
-                    className="group-hover:animate-pulse"
-                  />
-                  Explore My Work
-                </button>
+                <a
+                  href="https://www.youtube.com/@studio3dconcept"
+                  target="_blank"
+                >
+                  <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
+                    <MousePointer
+                      size={24}
+                      className="group-hover:animate-pulse"
+                    />
+                    Explore My Work
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -242,13 +243,15 @@ const HomePage: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-6 justify-start animate-fade-in-up"
                 style={{ animationDelay: "0.9s" }}
               >
-                <a href="https://www.youtube.com/@studio3dconcept" target="_blank">
-                <button className="group bg-red-600 hover:bg-red-700 text-white text-center px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
-                  <Youtube size={24} />
-                  Subscribe to Channel
-                </button>
+                <a
+                  href="https://www.youtube.com/@studio3dconcept"
+                  target="_blank"
+                >
+                  <button className="group bg-red-600 hover:bg-red-700 text-white text-center px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3">
+                    <Youtube size={24} />
+                    Subscribe to Channel
+                  </button>
                 </a>
-
               </div>
             </div>
 
@@ -498,7 +501,7 @@ const HomePage: React.FC = () => {
                     <Mail className="text-white" size={20} />
                   </div>
                   <span className="text-gray-300 group-hover:text-white transition-colors">
-                    sav.designer@email.com
+                    nawfal.bouy.1@gmail.com 
                   </span>
                 </div>
                 <div className="flex items-center gap-4 group">
@@ -514,7 +517,7 @@ const HomePage: React.FC = () => {
                     <MapPin className="text-white" size={20} />
                   </div>
                   <span className="text-gray-300 group-hover:text-white transition-colors">
-                    San Francisco, CA
+                    Québec; CANADA 
                   </span>
                 </div>
               </div>
@@ -526,9 +529,12 @@ const HomePage: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  { name: "Home", path: "/" },
-                  { name: "Videos", path: "/videos" },
-                ].map((item) => (
+                        { name: 'Home', path: '/' },
+                        { name: 'Videos', path: '/videos' },
+                        { name: 'Ã Propos', path: '/propos' },
+                        { name: 'Skills', path: '/skills' },
+                        // { name: 'Contact', path: '/contact' },
+                      ].map((item) => (
                   <Link
                     key={item.name}
                     to={item.path}

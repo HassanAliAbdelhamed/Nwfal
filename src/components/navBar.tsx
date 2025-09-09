@@ -15,6 +15,9 @@ function NavBar() {
                       {[
                         { name: 'Home', path: '/' },
                         { name: 'Videos', path: '/videos' },
+                        { name: 'Ã Propos', path: '/propos' },
+                        { name: 'Skills', path: '/skills' },
+                        // { name: 'Contact', path: '/contact' },
                       ].map((item) => (
                         <Link 
                           key={item.name}
@@ -42,6 +45,9 @@ function NavBar() {
                         {[
                         { name: 'Home', path: '/' },
                         { name: 'Videos', path: '/videos' },
+                        { name: 'Ã Propos', path: '/propos' },
+                        { name: 'Skills', path: '/skills' },
+                        // { name: 'Contact', path: '/contact' },
                       ].map((item) => (
                           <Link
                             key={item.name}

@@ -34,7 +34,7 @@ const videoCategories: VideoCategory[] = [
       },
       {
         title: "ASSEMBLY DESIGN & DMU KINEMATICS",
-        videoId: "GnO76iEXHHg",
+        videoId: "NRffAo8gMxc",
         thumbnail: c2,
       },
       {
@@ -59,7 +59,7 @@ const videoCategories: VideoCategory[] = [
     videos: [
       {
         title: "ADVENCED ASSEMBLY & SIMULATION [ C-CLAMP]",
-        videoId: "RK3NxL_Mo3w", // Replace with actual video ID
+        videoId: "kUZWn3eVkUE", // Replace with actual video ID
         thumbnail: s1,
       },
       {
