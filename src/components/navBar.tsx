@@ -14,10 +14,10 @@ function NavBar() {
                     <div className="hidden md:flex space-x-8">
                       {[
                         { name: 'Home', path: '/' },
-                        { name: 'Videos', path: '/videos' },
                         { name: 'Ã Propos', path: '/propos' },
                         { name: 'Skills', path: '/skills' },
-                        // { name: 'Contact', path: '/contact' },
+                        { name: 'Videos', path: '/videos' },
+                        { name: 'Contact', path: '/contact' },
                       ].map((item) => (
                         <Link 
                           key={item.name}
@@ -44,10 +44,10 @@ function NavBar() {
                       <div className="flex flex-col space-y-4">
                         {[
                         { name: 'Home', path: '/' },
-                        { name: 'Videos', path: '/videos' },
                         { name: 'Ã Propos', path: '/propos' },
                         { name: 'Skills', path: '/skills' },
-                        // { name: 'Contact', path: '/contact' },
+                        { name: 'Videos', path: '/videos' },
+                        { name: 'Contact', path: '/contact' },
                       ].map((item) => (
                           <Link
                             key={item.name}

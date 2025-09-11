@@ -530,10 +530,10 @@ const HomePage: React.FC = () => {
               <div className="space-y-4">
                 {[
                         { name: 'Home', path: '/' },
-                        { name: 'Videos', path: '/videos' },
                         { name: 'Ã Propos', path: '/propos' },
                         { name: 'Skills', path: '/skills' },
-                        // { name: 'Contact', path: '/contact' },
+                        { name: 'Videos', path: '/videos' },
+                        { name: 'Contact', path: '/contact' },
                       ].map((item) => (
                   <Link
                     key={item.name}
