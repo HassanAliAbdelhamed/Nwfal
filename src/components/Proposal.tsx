@@ -59,10 +59,7 @@ export default function Proposal() {
                       doté d’une solide maîtrise des logiciels de CAO/DAO
                       (SolidWorks, AutoCAD, CATIA), spécialisé dans la conception et
                       l’optimisation de pièces et d’assemblages mécaniques. Capable
-                      de lire et interpréter des plans techniques,
-                    </p>
-                    <p>
-                      d’appliquer les normes industrielles et de collaborer
+                      de lire et interpréter des plans techniques,d’appliquer les normes industrielles et de collaborer
                       étroitement avec les ingénieurs et les équipes de production.
                       Rigoureux, créatif et orienté solutions, je contribue au
                       développement de produits fiables, innovants et adaptés aux
